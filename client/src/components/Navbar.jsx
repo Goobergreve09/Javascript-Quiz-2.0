@@ -9,7 +9,7 @@ import {
   NavLink,
 } from "react-bootstrap";
 import Javascript from "../assets/images/javascript.png";
-import {  NavLink as RouterNavLink } from "react-router-dom";
+import { NavLink as RouterNavLink } from "react-router-dom";
 
 import Auth from "../utils/auth";
 
@@ -52,6 +52,14 @@ const AppNavbar = () => {
           <Navbar.Toggle onClick={handleNavbarToggle} />
           <Navbar.Collapse>
             <Nav className="mr-auto">
+              <Nav.Link
+                as={RouterNavLink}
+                to="/global-highscores"
+                activeClassName="active"
+                onClick={handleLinkClick}
+              >
+                Global High-Scores
+              </Nav.Link>
               {Auth.loggedIn() ? (
                 <>
                   <Nav.Link
@@ -102,7 +110,9 @@ const AppNavbar = () => {
                 <PlayerLoginForm handleModalClose={() => setShowModal(false)} />
               </Tab.Pane>
               <Tab.Pane eventKey="signup">
-                <CreatePlayerForm handleModalClose={() => setShowModal(false)} />
+                <CreatePlayerForm
+                  handleModalClose={() => setShowModal(false)}
+                />
               </Tab.Pane>
             </Tab.Content>
           </Modal.Body>
@@ -113,4 +123,3 @@ const AppNavbar = () => {
 };
 
 export default AppNavbar;
-

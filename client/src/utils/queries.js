@@ -25,3 +25,18 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_ALL_USERS = gql`
+  query {
+    users {
+      _id
+      username
+      country
+      userHighscores {
+        _id
+        user_highscores
+        createdAt
+      }
+    }
+  }
+`;

@@ -23,7 +23,7 @@ const HighScores = () => {
   const top12Scores = sortedScores.slice(0, 12);
 
   return (
-    <Container fluid className='d-flex justify-content-center'>
+    <Container fluid className='d-flex justify-content-center '>
     <Card className='justify-content-center' style = {{width:'75%'}}>
       <Card.Header className = 'text-center userScoresheader'><span className='bold'>{userData.username}'s High Scores</span></Card.Header>
       <Card.Body className = 'text-center'>
@@ -31,7 +31,7 @@ const HighScores = () => {
           {/* Map over the top 12 scores and display each score */}
           {top12Scores.map((score, index) => (
             <ListGroup.Item key={index} className='scoreRow'>
-              <Row className = 'align-items-center'>
+              <Row>
                 <Col className="player-score-col"><span className ='bold'>Player Score: {score.user_highscores}</span></Col>
                 <Col className="date-col"><span className ='bold'>Taken:</span> {new Date(score.createdAt).toLocaleString()}</Col>
               </Row>

@@ -8,6 +8,7 @@ import Quiz from "./pages/Quiz";
 import Error from "./pages/Error";
 import App from "./App";
 import Highscores from './pages/Highscores'
+import GlobalHighscores from './pages/GlobalHighscores'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path:'/user-highscores',
         element:<Highscores />
+      },
+      {
+        path:'/global-highscores',
+        element:<GlobalHighscores />
       }
     ],
   },
