@@ -1,4 +1,4 @@
-const countryInfo = [
+export const countryInfo = [
     { name: "Afghanistan", flagURL: "https://cdn.countryflags.com/thumbs/afghanistan/flag-800.png" },
     { name: "Albania", flagURL: "https://cdn.countryflags.com/thumbs/albania/flag-800.png" },
     { name: "Algeria", flagURL: "https://cdn.countryflags.com/thumbs/algeria/flag-800.png" },
@@ -200,12 +200,3 @@ const countryInfo = [
 
 
 
-  export const CountryFlag = ({ countryCode, className }) => {
-    const country = countryInfo.find((info) => info.name === countryCode);
-  
-    if (country) {
-      return <img src={country.flagURL} alt={`Flag of ${country.name}`} className={`flag-image ${className}`} style={{ width: '100px', height: 'auto' }} />;
-    } else {
-      return <span>No flag available</span>;
-    }
-  };

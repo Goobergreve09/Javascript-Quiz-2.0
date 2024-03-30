@@ -1,7 +1,7 @@
 import { Card, ListGroup, Row, Col, Container } from 'react-bootstrap';
 import { useQuery } from '@apollo/client';
 import { QUERY_ALL_USERS } from '../utils/queries';
-import { CountryFlag } from '../utils/CountryFlag';
+import { countryInfo } from '../utils/CountryFlag';
 
 import '../index.css'
 
@@ -10,6 +10,16 @@ const GlobalHighScores = () => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
+
+const CountryFlag = ({ countryCode, className }) => {
+    const country = countryInfo.find((info) => info.name === countryCode);
+  
+    if (country) {
+      return <img src={country.flagURL} alt={`Flag of ${country.name}`} className={`flag-image ${className}`} style={{ width: '100px', height: 'auto' }} />;
+    } else {
+      return <span>No flag available</span>;
+    }
+  };
 
   // Extract all users' data
   const allUsers = data.users;
