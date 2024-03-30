@@ -185,7 +185,7 @@ export const countryInfo = [
     { name: "Ukraine", flagURL: "https://cdn.countryflags.com/thumbs/ukraine/flag-800.png" },
     { name: "United Arab Emirates", flagURL: "https://cdn.countryflags.com/thumbs/united-arab-emirates/flag-800.png" },
     { name: "United Kingdom", flagURL: "https://cdn.countryflags.com/thumbs/united-kingdom/flag-800.png" },
-    { name: "United States of America", flagURL: "https://cdn.countryflags.com/thumbs/united-states/flag-800.png" },
+    { name: "United States of America", flagURL: "https://cdn.countryflags.com/thumbs/united-states-of-america/flag-800.png" },
     { name: "Uruguay", flagURL: "https://cdn.countryflags.com/thumbs/uruguay/flag-800.png" },
     { name: "Uzbekistan", flagURL: "https://cdn.countryflags.com/thumbs/uzbekistan/flag-800.png" },
     { name: "Vanuatu", flagURL: "https://cdn.countryflags.com/thumbs/vanuatu/flag-800.png" },

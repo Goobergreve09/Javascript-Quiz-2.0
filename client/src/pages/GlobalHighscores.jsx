@@ -1,25 +1,14 @@
 import { Card, ListGroup, Row, Col, Container } from 'react-bootstrap';
 import { useQuery } from '@apollo/client';
 import { QUERY_ALL_USERS } from '../utils/queries';
-import { countryInfo } from '../utils/CountryFlag';
-
-import '../index.css'
+import { countryInfo } from '../utils/CountryFlag'; // Import countryInfo directly
+import '../index.css';
 
 const GlobalHighScores = () => {
   const { loading, error, data } = useQuery(QUERY_ALL_USERS);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
-
-const CountryFlag = ({ countryCode, className }) => {
-    const country = countryInfo.find((info) => info.name === countryCode);
-  
-    if (country) {
-      return <img src={country.flagURL} alt={`Flag of ${country.name}`} className={`flag-image ${className}`} style={{ width: '100px', height: 'auto' }} />;
-    } else {
-      return <span>No flag available</span>;
-    }
-  };
 
   // Extract all users' data
   const allUsers = data.users;
@@ -38,32 +27,43 @@ const CountryFlag = ({ countryCode, className }) => {
   // Get top 25 scores
   const top25Scores = allScores.slice(0, 25);
 
-    return (
-      <Container fluid className='d-flex justify-content-center align-items-center'>
-        <Card className='justify-content-center' style={{ width: '90%' }}>
-          <Card.Header className='text-center userScoresheader'>Top 25 High Scores</Card.Header>
-          <Card.Body className='text-center'>
-            <ListGroup>
-              {/* Map over the top 25 scores and display each score */}
-              {top25Scores.map((item, index) => (
-                <ListGroup.Item key={index}>
-                  <Row className='align-items-center justify-content-center h-100 bold'>
-                   
-                     <Col> {index + 1}.</Col>
-                     <Col>{item.user.username}</Col>
-                      <Col>{item.score.user_highscores} </Col>
-                      <Col>
-                      <CountryFlag countryCode={item.user.country} className="ml-2" />
-                    </Col>
-                  </Row>
-                </ListGroup.Item>
-              ))}
-            </ListGroup>
-          </Card.Body>
-        </Card>
-      </Container>
-    );
-  };
-  
-  
-  export default GlobalHighScores;
+  return (
+    <Container fluid className='d-flex justify-content-center align-items-center'>
+      <Card className='justify-content-center' style={{ width: '90%' }}>
+        <Card.Header className='text-center userScoresheader'>Top 25 High Scores</Card.Header>
+        <Card.Body className='text-center'>
+          <ListGroup>
+            {/* Map over the top 25 scores and display each score */}
+            {top25Scores.map((item, index) => (
+              <ListGroup.Item key={index}>
+                <Row className='align-items-center justify-content-center h-100 bold'>
+                  <Col>{index + 1}.</Col>
+                  <Col>{item.user.username}</Col>
+                  <Col>{item.score.user_highscores}</Col>
+                  <Col>
+        {countryInfo.map((country, i) => {
+          if (country.name === item.user.country) {
+            return (
+              <img
+                key={i}
+                src={country.flagURL}
+                alt={`Flag of ${country.name}`}
+                className="flag-image ml-2"
+                style={{ width: '100px', height: 'auto' }}
+              />
+            );
+          }
+          return null;
+        })}
+      </Col>
+                </Row>
+              </ListGroup.Item>
+            ))}
+          </ListGroup>
+        </Card.Body>
+      </Card>
+    </Container>
+  );
+};
+
+export default GlobalHighScores;
