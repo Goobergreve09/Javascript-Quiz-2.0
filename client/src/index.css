@@ -3,14 +3,14 @@
 }
 
 .date-col {
-  height:100%;
-  padding-top:10px;
+  height: 100%;
+  padding-top: 10px;
 }
 
 .scoreRow {
-  background-image: linear-gradient(to right, transparent 50%, #F1F0F0 50%);
+  background-image: linear-gradient(to right, transparent 50%, #f1f0f0 50%);
 }
 
 .questionCard {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Adjust the values as needed */
 }

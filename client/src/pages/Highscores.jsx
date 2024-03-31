@@ -1,8 +1,8 @@
-import { Card, ListGroup, Row, Col, Container } from 'react-bootstrap';
-import { useQuery } from '@apollo/client';
-import { QUERY_ME } from '../utils/queries';
+import { Card, ListGroup, Row, Col, Container } from "react-bootstrap";
+import { useQuery } from "@apollo/client";
+import { QUERY_ME } from "../utils/queries";
 
-import '../index.css'
+import "../index.css";
 
 // Define the HighScores component
 const HighScores = () => {
@@ -17,33 +17,42 @@ const HighScores = () => {
   const userData = data?.me || {};
 
   // Sort userHighscores by user_highscores in descending order
-  const sortedScores = userData.userHighscores.slice().sort((a, b) => b.user_highscores - a.user_highscores);
+  const sortedScores = userData.userHighscores
+    .slice()
+    .sort((a, b) => b.user_highscores - a.user_highscores);
 
   // Get the top 12 scores
   const top12Scores = sortedScores.slice(0, 12);
 
   return (
-    <Container fluid className='d-flex justify-content-center '>
-    <Card className='justify-content-center' style = {{width:'75%'}}>
-      <Card.Header className = 'text-center userScoresheader'><span className='bold'>{userData.username}'s High Scores</span></Card.Header>
-      <Card.Body className = 'text-center'>
-        <ListGroup>
-          {/* Map over the top 12 scores and display each score */}
-          {top12Scores.map((score, index) => (
-            <ListGroup.Item key={index} className='scoreRow'>
-              <Row>
-                <Col className="player-score-col"><span className ='bold'>Player Score: {score.user_highscores}</span></Col>
-                <Col className="date-col"><span className ='bold'>Taken:</span> {new Date(score.createdAt).toLocaleString()}</Col>
-              </Row>
-            </ListGroup.Item>
-          ))}
-        </ListGroup>
-      </Card.Body>
-    </Card>
+    <Container fluid className="d-flex justify-content-center ">
+      <Card className="justify-content-center" style={{ width: "75%" }}>
+        <Card.Header className="text-center userScoresheader">
+          <span className="bold">{userData.username}'s High Scores</span>
+        </Card.Header>
+        <Card.Body className="text-center">
+          <ListGroup>
+            {/* Map over the top 12 scores and display each score */}
+            {top12Scores.map((score, index) => (
+              <ListGroup.Item key={index} className="scoreRow">
+                <Row>
+                  <Col className="player-score-col">
+                    <span className="bold">
+                      Player Score: {score.user_highscores}
+                    </span>
+                  </Col>
+                  <Col className="date-col">
+                    <span className="bold">Taken:</span>{" "}
+                    {new Date(score.createdAt).toLocaleString()}
+                  </Col>
+                </Row>
+              </ListGroup.Item>
+            ))}
+          </ListGroup>
+        </Card.Body>
+      </Card>
     </Container>
   );
 };
 
 export default HighScores;
-
-

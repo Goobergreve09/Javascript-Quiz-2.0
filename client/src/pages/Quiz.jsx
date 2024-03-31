@@ -30,7 +30,7 @@ const Quiz = () => {
         });
       }, 1000);
     }
-  
+
     // Cleanup function to clear the interval when component unmounts or conditions change
     return () => clearInterval(timer);
   }, [showQuestion, quizEnded, sessionExpired]);
@@ -45,8 +45,7 @@ const Quiz = () => {
   useEffect(() => {
     // Update high score when quiz ends
     if (quizEnded && data && data.me) {
-
-      console.log(data.me.userHighscores)
+      console.log(data.me.userHighscores);
       if (score) {
         const userId = data.me._id;
         updateHighScores({ variables: { userId: userId, highScore: score } })
@@ -58,7 +57,7 @@ const Quiz = () => {
           .catch((error) => console.error("Error updating high score:", error));
       }
     }
-  }, [quizEnded]); 
+  }, [quizEnded]);
 
   const handleAnswerSelect = (index) => setSelectedAnswer(index);
 
@@ -99,10 +98,18 @@ const Quiz = () => {
   };
 
   return (
-    <Container fluid className="d-flex align-items-center justify-content-center" style={{ minHeight: '100vh' }}>
+    <Container
+      fluid
+      className="d-flex align-items-center justify-content-center"
+      style={{ minHeight: "100vh" }}
+    >
       {/* Show session expiration alert if session expired */}
       {sessionExpired && (
-        <Alert variant="danger" onClose={() => setSessionExpired(false)} dismissible>
+        <Alert
+          variant="danger"
+          onClose={() => setSessionExpired(false)}
+          dismissible
+        >
           <Alert.Heading>Session Expired</Alert.Heading>
           <p>Your session has expired. Please log in again to continue.</p>
         </Alert>
@@ -111,16 +118,27 @@ const Quiz = () => {
       {/* Start Quiz Button */}
       {!showQuestion && !quizEnded && !sessionExpired && (
         <Card className="w-75">
-          <Card.Header><h1 className="text-center">Javascript Quiz</h1></Card.Header>
-          <Card.Title className="text-center"><h3>The Rules</h3></Card.Title>
+          <Card.Header>
+            <h1 className="text-center">Javascript Quiz</h1>
+          </Card.Header>
+          <Card.Title className="text-center">
+            <h3>The Rules</h3>
+          </Card.Title>
           <Row className="justify-content-center pb-4">
-            <Card.Text className="w-75 text-center"><h6>You will have 2 minutes to answer as many questions as possible. Each correct
-             answer is worth 250 points. If you get a question wrong, 15 seconds will be deducted from the time,
-              and you will lose 100 points. When you are ready, Click the 'Start Quiz' button below.
-            </h6></Card.Text>
+            <Card.Text className="w-75 text-center">
+              <h6>
+                You will have 2 minutes to answer as many questions as possible.
+                Each correct answer is worth 250 points. If you get a question
+                wrong, 15 seconds will be deducted from the time, and you will
+                lose 100 points. When you are ready, Click the 'Start Quiz'
+                button below.
+              </h6>
+            </Card.Text>
           </Row>
           <Row className="justify-content-center mb-3">
-            <Button className="w-25 h-25" variant="success" onClick={startQuiz}>Start Quiz</Button>
+            <Button className="w-25 h-25" variant="success" onClick={startQuiz}>
+              Start Quiz
+            </Button>
           </Row>
         </Card>
       )}
@@ -138,22 +156,32 @@ const Quiz = () => {
               <>
                 {currentQuestionIndex < questions.length ? (
                   <>
-                    <h5 className="pb-2 text-center">{questions[currentQuestionIndex].question}</h5>
+                    <h5 className="pb-2 text-center">
+                      {questions[currentQuestionIndex].question}
+                    </h5>
                     <Form>
-                      {questions[currentQuestionIndex].answers.map((answer, index) => (
-                        <Form.Check
-                          key={index}
-                          type="radio"
-                          id={`answer-${index}`}
-                          label={answer}
-                          checked={selectedAnswer === index}
-                          onChange={() => handleAnswerSelect(index)}
-                          className="pb-2"
-                        />
-                      ))}
+                      {questions[currentQuestionIndex].answers.map(
+                        (answer, index) => (
+                          <Form.Check
+                            key={index}
+                            type="radio"
+                            id={`answer-${index}`}
+                            label={answer}
+                            checked={selectedAnswer === index}
+                            onChange={() => handleAnswerSelect(index)}
+                            className="pb-2"
+                          />
+                        )
+                      )}
                     </Form>
                     <Row className="justify-content-center">
-                      <Button className="text-center w-25" variant="success" onClick={checkAnswer}>Submit Answer</Button>
+                      <Button
+                        className="text-center w-25"
+                        variant="success"
+                        onClick={checkAnswer}
+                      >
+                        Submit Answer
+                      </Button>
                     </Row>
                     <Row className="text-center p-2">
                       <p>Time Left: {timeLeft} seconds</p>
@@ -163,11 +191,16 @@ const Quiz = () => {
                     </Row>
                   </>
                 ) : (
-                  <p className="text-center">Quiz Finished! Your score: {score}</p>
+                  <p className="text-center">
+                    Quiz Finished! Your score: {score}
+                  </p>
                 )}
               </>
             ) : (
-              <p className="text-center">If you're not logged in, please sign up or create a player to begin</p>
+              <p className="text-center">
+                If you're not logged in, please sign up or create a player to
+                begin
+              </p>
             )}
           </Card.Body>
         </Card>
