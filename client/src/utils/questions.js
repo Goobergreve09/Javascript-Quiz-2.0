@@ -139,6 +139,50 @@ const questions = [
         ],
         correctAnswerIndex: 1,
       },
+{
+      question: "Which of the following is an array method?",
+      answers: [
+        "Map",
+        "Filter",
+        "Reduce",
+        "All of the Above",
+      ],
+      correctAnswerIndex: 3,
+    },
+
+    {
+      question: "What is destructuring in JavaScript?",
+      answers: [
+        "Through destructuring, we can unpack values from arrays or object properties into separate variables.",
+        "Destructuring allows us to restructure object properties",
+        "Destructuring allows us to restructure array elements.",
+        "All of the Above",
+      ],
+      correctAnswerIndex: 0,
+    },
+
+    {
+      question: "What will ‘0 == false ’ evaluate to?",
+      answers: [
+        "null",
+        "undefined",
+        "Throws Error",
+        "True",
+      ],
+      correctAnswerIndex: 3,
+    },
+
+    {
+      question: "What is the right syntax to accept an indefinite number of parameters?",
+      answers: [
+        "Function sum(...theArgs) {}",
+        "Function sum(theArgs...) {}",
+        "Function sum(theArgs) {} ",
+        "Function sum([theArgs]) {}",
+      ],
+      correctAnswerIndex: 0,
+    },
+
 
       
 
@@ -147,4 +191,4 @@ const questions = [
   
   export default questions;
 
-  //triggering deploy
+  
