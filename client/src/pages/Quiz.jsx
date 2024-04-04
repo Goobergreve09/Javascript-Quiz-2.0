@@ -89,30 +89,15 @@ const Quiz = () => {
     setSessionExpired(false); // Reset session expiration flag
   };
 
-  // Handle session expiration
-  const handleSessionExpiration = () => {
-    // Clear token and user info
-    Auth.logout();
-    // Set session expiration flag
-    setSessionExpired(true);
-  };
-
   return (
     <Container
       fluid
       className="d-flex align-items-center justify-content-center"
       style={{ minHeight: "100vh" }}
     >
-      {/* Show session expiration alert if session expired */}
-      {sessionExpired && (
-        <Alert
-          variant="danger"
-          onClose={() => setSessionExpired(false)}
-          dismissible
-        >
-          <Alert.Heading>Session Expired</Alert.Heading>
-          <p>Your session has expired. Please log in again to continue.</p>
-        </Alert>
+    {!Auth.loggedIn() && (
+      
+        <h1 className="text-center">You are not logged in. Please create a player or log in to begin.</h1>
       )}
 
       {/* Start Quiz Button */}
