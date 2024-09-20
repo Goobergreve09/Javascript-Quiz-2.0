@@ -32,11 +32,7 @@ const AppNavbar = () => {
 
   return (
     <>
-      <Navbar
-        expand="lg"
-        expanded={expanded}
-        className="bg-body-tertiary navbar"
-      >
+      <Navbar expand="lg" expanded={expanded} className="bg-body-tertiary navbar">
         <Container>
           <Navbar.Brand href="/">
             <img
@@ -55,7 +51,7 @@ const AppNavbar = () => {
               <Nav.Link
                 as={RouterNavLink}
                 to="/global-highscores"
-                activeClassName="active"
+                className={({ isActive }) => (isActive ? "active" : "")}
                 onClick={handleLinkClick}
               >
                 Global High-Scores
@@ -65,7 +61,7 @@ const AppNavbar = () => {
                   <Nav.Link
                     as={RouterNavLink}
                     to="/user-highscores"
-                    activeClassName="active"
+                    className={({ isActive }) => (isActive ? "active" : "")}
                     onClick={handleLinkClick}
                   >
                     High-Scores
@@ -110,9 +106,7 @@ const AppNavbar = () => {
                 <PlayerLoginForm handleModalClose={() => setShowModal(false)} />
               </Tab.Pane>
               <Tab.Pane eventKey="signup">
-                <CreatePlayerForm
-                  handleModalClose={() => setShowModal(false)}
-                />
+                <CreatePlayerForm handleModalClose={() => setShowModal(false)} />
               </Tab.Pane>
             </Tab.Content>
           </Modal.Body>
@@ -123,3 +117,4 @@ const AppNavbar = () => {
 };
 
 export default AppNavbar;
+

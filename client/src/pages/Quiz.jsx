@@ -111,7 +111,7 @@ const Quiz = () => {
             <h3>The Rules</h3>
           </Card.Title>
           <Row className="justify-content-center pb-4">
-            <Card.Text className="w-75 text-center">
+            <div className="w-75 text-center">
               <h6>
                 You will have 2 minutes to answer as many questions as possible.
                 Each correct answer is worth 250 points. If you get a question
@@ -119,7 +119,7 @@ const Quiz = () => {
                 lose 100 points. When you are ready, Click the 'Start Quiz'
                 button below.
               </h6>
-            </Card.Text>
+            </div>
           </Row>
           <Row className="justify-content-center mb-3">
             <Button className="w-25 h-25" variant="success" onClick={startQuiz}>
