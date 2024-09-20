@@ -95,9 +95,10 @@ const Quiz = () => {
       className="d-flex align-items-center justify-content-center"
       style={{ minHeight: "100vh" }}
     >
-    {!Auth.loggedIn() && (
-      
-        <h1 className="text-center">You are not logged in. Please create a player or log in to begin.</h1>
+      {!Auth.loggedIn() && (
+        <h1 className="text-center">
+          You are not logged in. Please create a player or log in to begin.
+        </h1>
       )}
 
       {/* Start Quiz Button */}
