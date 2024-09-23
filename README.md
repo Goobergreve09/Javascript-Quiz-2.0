@@ -6,7 +6,7 @@
   
 ## Description
 
-The JavaScript Quiz Application is a user-friendly web-based quiz platform designed to test users' knowledge of JavaScript programming concepts. Built with simplicity and functionality in mind, this application provides an interactive way for users to assess their understanding of JavaScript while offering an enjoyable learning experience.It is a timed quiz with rules to the scoring. Keep results of your highscores and see where you rank among others with a global-highscores page all being stored in a MongoDB database. This application is also responsive so you can test your skills on mobile.
+The JavaScript Quiz Application is a user-friendly web-based quiz platform designed to test users' knowledge of JavaScript programming concepts. Built with simplicity and functionality in mind, this application provides an interactive way for users to assess their understanding of JavaScript while offering an enjoyable learning experience.It is a timed quiz with rules to the scoring. Keep results of your highscores and see where you rank among others with a global-highscores page all being stored in a MongoDB database. This application is also responsive so you can test your skills on mobile. This application uses a database-pinging setup with [Github Actions](https://docs.github.com/en/actions) to keep browser browser optimization efficient.
 
 This quiz is a revamp of an older quiz I created as my skills have been more enhanced. View the old repository [here](https://github.com/Goobergreve09/js-javascript-quiz)
 
