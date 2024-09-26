@@ -1,7 +1,7 @@
 import { Card, ListGroup, Row, Col, Container } from "react-bootstrap";
 import { useQuery } from "@apollo/client";
 import { QUERY_ALL_USERS } from "../utils/queries";
-import countryList from "client/src/utils/country.jsx";
+import countryList from "../utils/country";
 import "../index.css";
 
 const GlobalHighScores = () => {
