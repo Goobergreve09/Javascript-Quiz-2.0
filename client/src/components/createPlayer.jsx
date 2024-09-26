@@ -113,9 +113,9 @@ const CreatePlayerForm = () => {
             required
           >
             <option value="">Select country</option>
-            {countryList.map((countryName, index) => (
-              <option key={index} value={countryName}>
-                {countryName}
+            {countryList.map((country, index) => (
+              <option key={index} value={country.name}>
+                {country.name}
               </option>
             ))}
           </Form.Control>
