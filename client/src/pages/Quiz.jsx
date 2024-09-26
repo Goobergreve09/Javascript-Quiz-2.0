@@ -155,7 +155,7 @@ const Quiz = () => {
                             label={answer}
                             checked={selectedAnswer === index}
                             onChange={() => handleAnswerSelect(index)}
-                            className="pb-2"
+                           className="pb-2 custom-radio"
                           />
                         )
                       )}
