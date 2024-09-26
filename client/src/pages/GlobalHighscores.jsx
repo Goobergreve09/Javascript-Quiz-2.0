@@ -1,7 +1,7 @@
 import { Card, ListGroup, Row, Col, Container } from "react-bootstrap";
 import { useQuery } from "@apollo/client";
 import { QUERY_ALL_USERS } from "../utils/queries";
-import countryList  from "../utils/Country"; 
+import countryList from "../utils/country";
 import "../index.css";
 
 const GlobalHighScores = () => {
@@ -48,14 +48,16 @@ const GlobalHighScores = () => {
             {/* Map over the top 25 scores and display each score */}
             {top25Scores.map((item, index) => (
               <ListGroup.Item key={index}>
-                 <Row className="align-items-center justify-content-center h-100 bold">
+                <Row className="align-items-center justify-content-center h-100 bold">
                   <Col>{index + 1}.</Col>
                   <Col>{item.user.username}</Col>
                   <Col>{item.score.user_highscores}</Col>
                   <Col>
                     {countryLookup[item.user.country] ? (
                       <img
-                        src={`https://flagsapi.com/${countryLookup[item.user.country]}/shiny/64.png`}
+                        src={`https://flagsapi.com/${
+                          countryLookup[item.user.country]
+                        }/shiny/64.png`}
                         alt={`Flag of ${item.user.country}`}
                         className="flag-image ml-2"
                         style={{ width: "100px", height: "auto" }}
