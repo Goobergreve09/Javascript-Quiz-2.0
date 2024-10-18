@@ -10,7 +10,7 @@ The JavaScript Quiz Application is a user-friendly web-based quiz platform desig
 
 This quiz is a revamp of an older quiz I created as my skills have been more enhanced. View the old repository [here](https://github.com/Goobergreve09/js-javascript-quiz)
 
-![screenshot](https://github.com/Goobergreve09/Javascript-Quiz-2.0/assets/143923830/9a81f411-e3fa-418a-af37-94e911efc688)
+![js](https://github.com/user-attachments/assets/7386899b-57e4-4b77-8e25-6a93ea74c5d8)
 
 
   
@@ -27,7 +27,7 @@ This quiz is a revamp of an older quiz I created as my skills have been more enh
 
 To test your wits with the most experienced Javascript quiz takers, check out the application with the link below.
 
-[Javscript Quiz Deployment](https://javascript-quiz-2-0.onrender.com/)
+[Javscript Quiz Deployment](https://javascript-quiz-86ff3d4dace3.herokuapp.com/)
 
 ## Features
 
