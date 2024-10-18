@@ -35,7 +35,7 @@ To test your wits with the most experienced Javascript quiz takers, check out th
 
 *   **Score Tracking:** As users progress through the quiz, their scores are dynamically updated in real-time, allowing them to monitor their performance throughout the quiz session.View where your final score ranks amongst yourself, and others.
 
-![screenshot2](https://github.com/Goobergreve09/Javascript-Quiz-2.0/assets/143923830/b94635b6-8571-4ab4-886a-010c697a9938)
+![js2](https://github.com/user-attachments/assets/3da3a8aa-c591-453e-91d5-be4a509ef442)
 
 ![screenshot 3](https://github.com/Goobergreve09/Javascript-Quiz-2.0/assets/143923830/d6e30c5e-dbf1-4205-b563-1908160eb9a9)
 
