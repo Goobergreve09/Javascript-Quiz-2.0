@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '*/5 * * * *' # Every 5 minutes
+    - cron: "*/5 * * * *" # Every 5 minutes
 
 jobs:
   ping:
@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20' # Use Node.js version 20 or your desired version
+          node-version: "20" # Use Node.js version 20 or your desired version
 
       - name: Install dependencies
         run: npm install
