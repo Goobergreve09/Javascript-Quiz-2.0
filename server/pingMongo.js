@@ -32,6 +32,6 @@ async function pingMongoDB() {
 // Start pinging immediately
 pingMongoDB();
 
-// Set an interval to ping every 360 minutes (6 hours)
+// Set an interval to ping every 360 minutes (6 hours)//
 setInterval(pingMongoDB, 360 * 60 * 1000); // 360 minutes in milliseconds
 
