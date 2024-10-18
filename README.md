@@ -37,7 +37,7 @@ To test your wits with the most experienced Javascript quiz takers, check out th
 
 ![js2](https://github.com/user-attachments/assets/3da3a8aa-c591-453e-91d5-be4a509ef442)
 
-![screenshot 3](https://github.com/Goobergreve09/Javascript-Quiz-2.0/assets/143923830/d6e30c5e-dbf1-4205-b563-1908160eb9a9)
+![js-3](https://github.com/user-attachments/assets/041e405c-7403-46f9-9df8-d3229570b2bf)
 
 *   **Timer:** A countdown timer adds an element of challenge and urgency to the quiz, encouraging users to answer questions promptly and accurately within the allotted time frame.
 
