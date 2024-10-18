@@ -25,17 +25,10 @@ async function pingMongoDB() {
   } catch (err) {
     console.error("Error pinging MongoDB:", err);
   } finally {
-    // Note: We are not closing the connection so the interval keeps running.
-    // Keeping it open to ensure the connection stays alive.
+    // Close the connection
+    await client.close(); // Close the connection after the ping
   }
 }
 
-// Function to start the pinging process
-function startPinging() {
-  // Ping MongoDB every 5 minutes
-  pingMongoDB(); // Initial ping
-  setInterval(pingMongoDB, 5 * 60 * 1000); // Repeat ping every 5 minutes
-}
-
 // Start pinging as soon as the script is executed
-startPinging();
+pingMongoDB();
