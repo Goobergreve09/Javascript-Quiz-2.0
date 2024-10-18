@@ -9,7 +9,9 @@ import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 const httpLink = createHttpLink({
-  uri: "/graphql",
+  uri: process.env.NODE_ENV === "production"
+    ? "/graphql"  // Production - assumes client and server on the same domain
+    : "http://localhost:3001/graphql",  // Development - use localhost for the API
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
