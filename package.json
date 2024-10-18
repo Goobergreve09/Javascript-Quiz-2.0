@@ -9,7 +9,7 @@
     "install": "cd server && npm i && cd ../client && npm i --production=false",
     "seed": "node server/config/seeds.js",
     "build": "cd client && npm run build",
-    "vercel-build": "npm install && npm run build"
+    "heroku-postbuild": "npm install && npm run build" 
   },
   "keywords": [],
   "author": "",
@@ -20,7 +20,14 @@
   "dependencies": {
     "@types/react-router": "^5.1.20",
     "bootstrap": "^5.3.3",
+    "debug": "^4.3.7",
+    "got": "^14.4.3",
+    "heroku": "^8.7.1",
+    "heroku-cli-util": "^8.0.12",
+    "http-cache-semantics": "^4.1.1",
+    "printf": "^0.6.1",
     "react-bootstrap": "^2.10.2",
-    "reactstrap": "^9.2.2"
+    "reactstrap": "^9.2.2",
+    "semver": "^7.6.3"
   }
 }
