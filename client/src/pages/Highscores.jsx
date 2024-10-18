@@ -26,7 +26,7 @@ const HighScores = () => {
 
   return (
     <Container fluid className="d-flex justify-content-center ">
-      <Card className="justify-content-center" style={{ width: "75%" }}>
+      <Card className="justify-content-center mt-4 mb-4" style={{ width: "75%" }}>
         <Card.Header className="text-center userScoresheader">
           <span className="bold">{userData.username}'s High Scores</span>
         </Card.Header>
