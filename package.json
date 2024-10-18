@@ -20,14 +20,13 @@
   "dependencies": {
     "@types/react-router": "^5.1.20",
     "bootstrap": "^5.3.3",
-    "debug": "^4.3.7",
     "got": "^14.4.3",
-    "heroku": "^8.7.1",
-    "heroku-cli-util": "^8.0.12",
+    "heroku": "^8.1.9",
+    "heroku-cli-util": "^5.8.4",
     "http-cache-semantics": "^4.1.1",
-    "printf": "^0.6.1",
+    "latest": "^0.2.0",
     "react-bootstrap": "^2.10.2",
-    "reactstrap": "^9.2.2",
-    "semver": "^7.6.3"
+    "reactstrap": "^9.2.2"
+
   }
 }
