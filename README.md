@@ -27,7 +27,7 @@ This quiz is a revamp of an older quiz I created as my skills have been more enh
 
 To test your wits with the most experienced Javascript quiz takers, check out the application with the link below.
 
-[Javscript Quiz Deployment](https://javascript-quiz-2-0.onrender.com/)
+[Javscript Quiz Deployment](https://javascript-quiz-86ff3d4dace3.herokuapp.com/)
 
 ## Features
 
