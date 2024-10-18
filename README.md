@@ -69,7 +69,7 @@ Contributions to the JavaScript Quiz Application are welcome! If you encounter a
 5.  [bcrypt Password Hashing](https://www.npmjs.com/package/bcrypt)
 5.  [Apollo Server and GraphQl](https://www.apollographql.com/)
 6.  [MongoDB Atlas and MongoDB Compass](https://www.mongodb.com/cloud/atlas/lp/try4?utm_source=bing&utm_campaign=search_bs_pl_evergreen_atlas_core_prosp-brand_gic-null_amers-us_ps-all_desktop_eng_lead&utm_term=mongodb&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=415204521&adgroup=1208363748749201&msclkid=835fb92a109f1bcf1821df2266bf85d6)
-7.  [Render Deployment](https://render.com/)
+7.  [Heroku Deployment](https://heroku.com/)
 8. [UpTime Robot for persistent http requests](https://uptimerobot.com/?utm_source=google&utm_medium=cpc&utm_campaign=search-americas&utm_term=site-status&gad_source=1&gclid=Cj0KCQjwgL-3BhDnARIsAL6KZ68LcSit31XPGerQm-UJQP-OCLGqGvcEsJ9-cSkLsMUuRHAmuMt7xDQaApafEALw_wcB)
 
 
