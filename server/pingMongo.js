@@ -25,7 +25,7 @@ async function pingMongoDB() {
   } catch (err) {
     console.error("Error pinging MongoDB:", err);
   } finally {
-    // Close the connection
+    // Close the connection/
     await client.close(); // Close the connection after the ping
   }
 }
