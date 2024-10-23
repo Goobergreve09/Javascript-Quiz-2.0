@@ -39,7 +39,10 @@ const GlobalHighScores = () => {
       fluid
       className="d-flex justify-content-center align-items-center"
     >
-      <Card className="justify-content-center mt-4 mb-4" style={{ width: "90%" }}>
+      <Card
+        className="justify-content-center mt-4 mb-4"
+        style={{ width: "90%" }}
+      >
         <Card.Header className="text-center userScoresheader">
           Top 25 High Scores
         </Card.Header>
