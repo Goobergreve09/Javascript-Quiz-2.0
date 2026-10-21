@@ -6,14 +6,11 @@
   
 ## Description
 
-The JavaScript Quiz Application is a user-friendly web-based quiz platform designed to test users' knowledge of JavaScript programming concepts. Built with simplicity and functionality in mind, this application provides an interactive way for users to assess their understanding of JavaScript while offering an enjoyable learning experience.It is a timed quiz with rules to the scoring. Keep results of your highscores and see where you rank among others with a global-highscores page all being stored in a MongoDB database. This application is also responsive so you can test your skills on mobile. This application uses a database-pinging setup with [Github Actions](https://docs.github.com/en/actions) to keep browser browser optimization efficient.
-
-This quiz is a revamp of an older quiz I created as my skills have been more enhanced. View the old repository [here](https://github.com/Goobergreve09/js-javascript-quiz)
+The JavaScript Quiz Application is a user-friendly web-based quiz platform designed to test users' knowledge of JavaScript programming concepts. Built with simplicity and functionality in mind, this application provides an interactive way for users to assess their understanding of JavaScript while offering an enjoyable learning experience.It is a timed quiz with rules to the scoring. Keep results of your highscores and see where you rank among others with a global-highscores page all being stored in a MongoDB Atlas database. This application is also responsive so you can test your skills on mobile. This application uses a database-pinging setup with [Github Actions](https://docs.github.com/en/actions) to keep browser browser optimization efficient.
 
 ![js](https://github.com/user-attachments/assets/7386899b-57e4-4b77-8e25-6a93ea74c5d8)
 
 
-  
 ## Table of Contents
 
 1. [Description](#description)
@@ -27,7 +24,7 @@ This quiz is a revamp of an older quiz I created as my skills have been more enh
 
 To test your wits with the most experienced Javascript quiz takers, check out the application with the link below.
 
-[Javscript Quiz Deployment](https://javascript-quiz-86ff3d4dace3.herokuapp.com/)
+[Javscript Quiz Deployment](https://javascript-quiz-2.netlify.app/)
 
 ## Features
 
@@ -69,8 +66,8 @@ Contributions to the JavaScript Quiz Application are welcome! If you encounter a
 5.  [bcrypt Password Hashing](https://www.npmjs.com/package/bcrypt)
 5.  [Apollo Server and GraphQl](https://www.apollographql.com/)
 6.  [MongoDB Atlas and MongoDB Compass](https://www.mongodb.com/cloud/atlas/lp/try4?utm_source=bing&utm_campaign=search_bs_pl_evergreen_atlas_core_prosp-brand_gic-null_amers-us_ps-all_desktop_eng_lead&utm_term=mongodb&utm_medium=cpc_paid_search&utm_ad=e&utm_ad_campaign_id=415204521&adgroup=1208363748749201&msclkid=835fb92a109f1bcf1821df2266bf85d6)
-7.  [Heroku Deployment](https://heroku.com/)
-8. [UpTime Robot for persistent http requests](https://uptimerobot.com/?utm_source=google&utm_medium=cpc&utm_campaign=search-americas&utm_term=site-status&gad_source=1&gclid=Cj0KCQjwgL-3BhDnARIsAL6KZ68LcSit31XPGerQm-UJQP-OCLGqGvcEsJ9-cSkLsMUuRHAmuMt7xDQaApafEALw_wcB)
+7.  [Netlify Deployment](https://www.netlify.com/)
+
 
 
 ## License
